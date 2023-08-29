@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      .total {
+        font-weight: bold;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+      }
+      @media (max-width: 768px) {
+      table {
+        font-size: 12px; /* Decrease font size for smaller screens */
+      }
+      th,
+      td {
+        padding: 6px; /* Decrease padding for smaller cells */
+      }
+      .quantity {
+        width: 40px; /* Adjust input width for small screens */
+      }
+      .total {
+        font-size: 14px; /* Adjust font size for total row */
+      }
+    }
+    
+    </style>
+    <title>Bảng tính tiền bánh Trung Thu</title>
+  </head>
+  <body>
+    <div>
+      <h2>Bảng tính tiền bánh Trung Thu</h2>
+      <table>
+        <tr>
+          <th>Tên bánh</th>
+          <th>Giá tiền (VNĐ)</th>
+          <th>Số lượng</th>
+          <th>Tổng tiền (VNĐ)</th>
+        </tr>
+        <tr>
+          <td>Bánh Trung dẻo nhân đậu xanh</td>
+          <td>40000</td>
+          <td>
+            <input type="number" min="0" value="0" class="quantity" />
+          </td>
+          <td class="subtotal">0</td>
+        </tr>
+        <tr>
+          <td>Bánh Trung dẻo nhân Trà xanh</td>
+          <td>40000</td>
+          <td>
+            <input type="number" min="0" value="0" class="quantity" />
+          </td>
+          <td class="subtotal">0</td>
+        </tr>
+
+        <tr>
+          <td>Bánh Nướng - Dẻo nhân Khoai môn</td>
+          <td>40000</td>
+          <td>
+            <input type="number" min="0" value="0" class="quantity" />
+          </td>
+          <td class="subtotal">0</td>
+        </tr>
+        <tr>
+          <td>Bánh Nướng - Dẻo nhân Cốm</td>
+          <td>40000</td>
+          <td>
+            <input type="number" min="0" value="0" class="quantity" />
+          </td>
+          <td class="subtotal">0</td>
+        </tr>
+        <tr>
+          <td>Bánh Nướng - Dẻo nhân Sầu riêng</td>
+          <td>40000</td>
+          <td>
+            <input type="number" min="0" value="0" class="quantity" />
+          </td>
+          <td class="subtotal">0</td>
+        </tr>
+        <tr>
+          <td>Bánh Nướng - Dẻo nhân Thập cẩm</td>
+          <td>45000</td>
+          <td>
+            <input type="number" min="0" value="0" class="quantity" />
+          </td>
+          <td class="subtotal">0</td>
+        </tr>
+        <tr>
+          <td>Bánh Nướng - Dẻo nhân Sen Huế</td>
+          <td>45000</td>
+          <td>
+            <input type="number" min="0" value="0" class="quantity" />
+          </td>
+          <td class="subtotal">0</td>
+        </tr>
+        <tr>
+          <td>Bánh Nướng Thập cẩm Gà quay</td>
+          <td>50000</td>
+          <td>
+            <input type="number" min="0" value="0" class="quantity" />
+          </td>
+          <td class="subtotal">0</td>
+        </tr>
+        <tr>
+          <td>Bánh Nướng nhân Sữa dừa</td>
+          <td>45000</td>
+          <td>
+            <input type="number" min="0" value="0" class="quantity" />
+          </td>
+          <td class="subtotal">0</td>
+        </tr>
+        <tr>
+          <td>Bánh Nướng nhân Đậu đỏ</td>
+          <td>40000</td>
+          <td>
+            <input type="number" min="0" value="0" class="quantity" />
+          </td>
+          <td class="subtotal">0</td>
+        </tr>
+        <tr>
+          <td>Bánh Nướng Đậu xanh 1 trứng</td>
+          <td>45000</td>
+          <td>
+            <input type="number" min="0" value="0" class="quantity" />
+          </td>
+          <td class="subtotal">0</td>
+        </tr>
+        <tr>
+          <td>Bánh thập cẩm 1 trứng</td>
+          <td>50000</td>
+          <td>
+            <input type="number" min="0" value="0" class="quantity" />
+          </td>
+          <td class="subtotal">0</td>
+        </tr>
+        <tr>
+          <td>Vỏ Trà xanh nhân Trà xanh</td>
+          <td>45000</td>
+          <td>
+            <input type="number" min="0" value="0" class="quantity" />
+          </td>
+          <td class="subtotal">0</td>
+        </tr>
+        <tr>
+          <td>Vỏ Trà xanh nhân Sữa dừa</td>
+          <td>45000</td>
+          <td>
+            <input type="number" min="0" value="0" class="quantity" />
+          </td>
+          <td class="subtotal">0</td>
+        </tr>
+        <tr>
+          <td>Vỏ Socola nhân Đậu xanh</td>
+          <td>45000</td>
+          <td>
+            <input type="number" min="0" value="0" class="quantity" />
+          </td>
+          <td class="subtotal">0</td>
+        </tr>
+        <tr>
+          <td>Vỏ Khoai môn nhân Khoai môn</td>
+          <td>45000</td>
+          <td>
+            <input type="number" min="0" value="0" class="quantity" />
+          </td>
+          <td class="subtotal">0</td>
+        </tr>
+        <tr>
+          <td>Vỏ Dâu tây nhân Sầu riêng</td>
+          <td>45000</td>
+          <td>
+            <input type="number" min="0" value="0" class="quantity" />
+          </td>
+          <td class="subtotal">0</td>
+        </tr>
+        <tr>
+          <td>Vỏ Café nhân Café</td>
+          <td>45000</td>
+          <td>
+            <input type="number" min="0" value="0" class="quantity" />
+          </td>
+          <td class="subtotal">0</td>
+        </tr>
+        <tr>
+          <td>Vỏ socola nhân Đậu xanh trứng chảy</td>
+          <td>50000</td>
+          <td>
+            <input type="number" min="0" value="0" class="quantity" />
+          </td>
+          <td class="subtotal">0</td>
+        </tr>
+        <tr>
+          <td>Vỏ trà xanh nhân trà xanh trứng chảy</td>
+          <td>50000</td>
+          <td>
+            <input type="number" min="0" value="0" class="quantity" />
+          </td>
+          <td class="subtotal">0</td>
+        </tr>
+
+        <!-- Thêm các dòng cho các loại bánh khác ở đây -->
+        <tr class="total">
+          <td colspan="3">Tổng cộng</td>
+          <td id="grandTotal">0</td>
+        </tr>
+      </table>
+      <button onclick="calculateTotal()">Tính tiền</button>
+    </div>
+  </body>
+  <script>
+    function calculateTotal() {
+      let total = 0;
+      const quantityInputs = document.querySelectorAll(".quantity");
+      const subtotalElements = document.querySelectorAll(".subtotal");
+      const grandTotalElement = document.getElementById("grandTotal");
+
+      quantityInputs.forEach((input, index) => {
+        const price = parseInt(
+          input.parentNode.previousElementSibling.textContent
+        );
+        const quantity = parseInt(input.value);
+        const subtotal = price * quantity;
+        subtotalElements[index].textContent = formatCurrency(subtotal) + " VNĐ";
+        total += subtotal;
+      });
+
+      grandTotalElement.textContent = formatCurrency(total) + " VNĐ";
+    }
+
+    function formatCurrency(amount) {
+      return new Intl.NumberFormat("vi-VN", {
+        style: "currency",
+        currency: "VND",
+      }).format(amount);
+    }
+  </script>
+</html>
